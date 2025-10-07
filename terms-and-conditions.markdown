@@ -299,10 +299,6 @@ permalink: /terms-and-conditions/
                 <p>We reserve the right to modify these terms at any time. Continued use of the website after changes constitutes acceptance of the new terms.</p>
             </div>
 
-            <div class="terms-section">
-                <h2>9. Governing Law</h2>
-                <p>These terms shall be governed by and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law provisions.</p>
-            </div>
 
             <div class="contact-section">
                 <h2>Contact Information</h2>
