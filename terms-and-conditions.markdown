@@ -309,7 +309,7 @@ permalink: /terms-and-conditions/
                 <p>If you have any questions about these Terms & Conditions, please contact us:</p>
                 <div class="contact-details">
                      <p><strong>Facebook Chat:</strong> https://www.facebook.com/paramgyandarshan</p>
-                    <p><strong>Response Time:</strong> 2-3 business days</p>
+                    <p><strong>Response Time:</strong>24hrs</p>
                 </div>
             </div>
 
