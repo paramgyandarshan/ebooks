@@ -1,7 +1,7 @@
-- title: "Digital Marketing Mastery"
-  price: "$19.99"
-  description: "Learn how to grow your business online with proven digital marketing strategies."
-  cover: "/assets/images/ebook1.jpg"
+- title: "ঋভুগীতা (Ribhu Gita) Bengali Edition"
+  price: "₹299"
+  description: "ঋভুগীতা হল শ্রী রমণ মহর্ষির প্রিয় গ্রন্থ — অদ্বৈত জ্ঞানের গভীরতম শিক্ষা। এই বাংলা সংস্করণে অধ্যায় ২৬-এর সহজ অনুবাদ পাঠককে নিয়ে যাবে আত্ম-সত্য উপলব্ধির পথে।"
+  cover: "/assets/images/ribhu-gita-ঋভু-গীতা-Sri-Ramana-Maharshi.png"
   razorpay_link: "https://rzp.io/l/your-link-1"
 
 - title: "Python Programming Guide"
