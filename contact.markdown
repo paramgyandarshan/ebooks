@@ -244,24 +244,16 @@ permalink: /contact/
                         <div class="method-icon">📧</div>
                         <div class="method-details">
                             <h3>Email</h3>
-                            <p>support@knowledgehub.com</p>
+                            <p>paramgyandarshanchat@gmail.com</p>
                         </div>
                     </div>
                     
-                    <div class="contact-method">
-                        <div class="method-icon">💬</div>
-                        <div class="method-details">
-                            <h3>WhatsApp</h3>
-                            <a href="https://wa.me/1234567890" class="contact-link">Send Message</a>
-                        </div>
-                    </div>
                     
                     <div class="contact-method">
                         <div class="method-icon">🌐</div>
                         <div class="method-details">
                             <h3>Social Media</h3>
                             <div class="social-links">
-                                <a href="https://twitter.com/knowledgehub" class="social-link">Twitter</a>
                                 <a href="https://instagram.com/knowledgehub" class="social-link">Instagram</a>
                             </div>
                         </div>
