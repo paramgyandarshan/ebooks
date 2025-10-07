@@ -16,7 +16,7 @@ title: Home
                 <a href="#ebooks" class="btn btn-primary">Explore Ebooks</a>
             </div>
             <div class="hero-image">
-                <img src="/assets/images/hero-ebook.png" alt="Ebook Collection">
+                <img src="/assets/images/ribhu-gita-ঋভু-গীতা-Sri-Ramana-Maharshi.png" alt="Ebook Collection" width="300">
             </div>
         </div>
     </div>
