@@ -303,7 +303,56 @@ main h2 {
     background: #333;
     color: white;
     text-align: center;
-    padding: 2rem 0;
+     padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 /* Mobile Responsive */
