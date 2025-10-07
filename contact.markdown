@@ -254,7 +254,7 @@ permalink: /contact/
                         <div class="method-details">
                             <h3>Social Media</h3>
                             <div class="social-links">
-                                <a href="https://instagram.com/knowledgehub" class="social-link">Instagram</a>
+                                <a href="https://www.facebook.com/paramgyandarshan" class="social-link">Facebook</a>
                             </div>
                         </div>
                     </div>
