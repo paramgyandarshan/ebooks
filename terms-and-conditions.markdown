@@ -269,7 +269,7 @@ permalink: /terms-and-conditions/
                     <li>All sales are final once download is initiated</li>
                     <li>No refunds for change of mind or accidental purchases</li>
                     <li>Refunds only considered for technical issues preventing access</li>
-                    <li>Refund requests must be made within 7 days of purchase</li>
+                    <li>Refund requests must be made within 1 days of purchase</li>
                 </ul>
             </div>
 

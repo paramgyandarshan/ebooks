@@ -486,7 +486,7 @@ permalink: /shipping/
                     </div>
                     <div class="contact-method">
                         <span class="contact-icon">⏰</span>
-                        <span>Response within 12 hours</span>
+                        <span>Response within 24 hours</span>
                     </div>
                 </div>
             </div>
