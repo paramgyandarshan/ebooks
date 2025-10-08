@@ -230,7 +230,7 @@ permalink: /cancellation-refunds/
             <div class="policy-notice">
                 <div class="notice-icon">📄</div>
                 <h2>Important Notice</h2>
-                <p>Please read this policy carefully before purchasing any of our ebooks.</p>
+                <p>Please read this policy carefully before purchasing any of our ebooks. All sales are final unless specified below.</p>
             </div>
 
             <div class="policy-section">
@@ -247,19 +247,45 @@ permalink: /cancellation-refunds/
                 <h3>Refund Policy</h3>
                 <p>We do not offer refunds for ebook purchases except in the following specific circumstances:</p>
                 <ul class="policy-list">
-                    <li>Technical issues preventing download that cannot be resolved</li>
-                    <li>Duplicate purchase made by mistake</li>
-                    <li>File corruption that makes the ebook unreadable</li>
+                    <li>Technical issues preventing download that cannot be resolved within 24 hours</li>
+                    <li>Duplicate purchase made by mistake (verified through transaction records)</li>
+                    <li>File corruption that makes the ebook unreadable after multiple download attempts</li>
+                    <li>Unauthorized purchase made without account holder's consent</li>
                 </ul>
             </div>
 
             <div class="policy-section">
-                <h3>Refund Process</h3>
-                <p>If you believe you qualify for a refund under the above circumstances, please contact us within 7 days of purchase with:</p>
+                <h3>Refund Timeline & Process</h3>
+                <p>If you believe you qualify for a refund under the above circumstances, please note the following timeline and process:</p>
                 <ul class="policy-list">
-                    <li>Your order details</li>
-                    <li>Description of the issue</li>
-                    <li>Any relevant screenshots or error messages</li>
+                    <li><strong>Refund Request Window:</strong> 3 days from purchase date</li>
+                    <li><strong>Initial Response:</strong> Within 24 hours of request submission</li>
+                    <li><strong>Refund Processing Time:</strong> 3-5 business days after approval</li>
+                    <li><strong>Bank Processing:</strong> Additional 5-7 business days for bank transfer</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Refund Request Requirements</h3>
+                <p>To process your refund request, we require the following information:</p>
+                <ul class="policy-list">
+                    <li>Your complete order details and transaction ID</li>
+                    <li>Detailed description of the issue encountered</li>
+                    <li>Screenshots of error messages or download failures</li>
+                    <li>Proof of duplicate purchase (if applicable)</li>
+                    <li>Device and browser information for technical issues</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Non-Refundable Circumstances</h3>
+                <p>Please note that refunds will not be granted in the following cases:</p>
+                <ul class="policy-list">
+                    <li>Change of mind after purchase</li>
+                    <li>Not reading the ebook description thoroughly before purchase</li>
+                    <li>Technical issues on user's device or internet connection</li>
+                    <li>Inability to open the file due to incompatible software</li>
+                    <li>Purchasing the wrong ebook by mistake</li>
                 </ul>
             </div>
 
@@ -268,13 +294,15 @@ permalink: /cancellation-refunds/
                 <p>If you experience any issues with your purchase, please contact our support team first. We're committed to resolving any technical problems you may encounter.</p>
                 <div class="contact-info">
                     <p><strong>Facebook Chat:</strong> https://www.facebook.com/paramgyandarshan</p>
-                    <p><strong>Response Time:</strong> Within 24 hours</p>
+                    <p><strong>Email Support:</strong> paramgyandarshanchat@gmail.com</p>
+                    <p><strong>Initial Response Time:</strong> Within 24 hours</p>
+                    <p><strong>Resolution Timeframe:</strong> 2-3 business days for technical issues</p>
                 </div>
             </div>
 
             <div class="policy-note">
-                <h4>Note</h4>
-                <p>By purchasing our ebooks, you acknowledge that you have read and understood this Cancellation & Refunds policy.</p>
+                <h4>Important Note</h4>
+                <p>By purchasing our ebooks, you acknowledge that you have read, understood, and agree to be bound by this Cancellation & Refunds policy. We reserve the right to modify this policy at any time, with changes becoming effective immediately upon posting.</p>
             </div>
         </div>
     </div>
