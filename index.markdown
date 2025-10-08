@@ -690,13 +690,13 @@ title: Home
                             <img src="/assets/images/ribhu-gita-ঋভু-গীতা-Sri-Ramana-Maharshi.png" alt="Ribhu Gita" width="300">
                         </div>
                         <div class="slide">
-                            <img src="/assets/images/spiritual-book-2.jpg" alt="Spiritual Wisdom" width="300">
+                            <img src="/assets/images/Earthy Minimalistic Mindful Meditation How To Ebook Cover.png" alt="Spiritual Wisdom" width="300">
                         </div>
                         <div class="slide">
-                            <img src="/assets/images/philosophy-book-3.jpg" alt="Philosophy Guide" width="300">
+                            <img src="/assets/images/love-building-techniques.png" alt="Philosophy Guide" width="300">
                         </div>
                         <div class="slide">
-                            <img src="/assets/images/meditation-book-4.jpg" alt="Meditation Techniques" width="300">
+                            <img src="/assets/images/Wisdom of Chanakya.png" alt="Meditation Techniques" width="300">
                         </div>
                     </div>
                 </div>
