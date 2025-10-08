@@ -6,7 +6,6 @@ layout: default
 title: Home
 ---
 
-
 <style>
 /* Hero Section */
 .hero {
@@ -197,78 +196,6 @@ title: Home
     animation-play-state: paused;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-        min-height: auto;
-    }
-    
-    .hero-text {
-        padding-right: 0;
-        order: 2;
-    }
-    
-    .hero-slider {
-        order: 1;
-        height: 300px;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-    
-    .hero-text p {
-        font-size: 1.1rem;
-    }
-    
-    .slider-controls {
-        bottom: 10px;
-    }
-    
-    .slider-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 100px 0 60px;
-    }
-    
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-slider {
-        height: 250px;
-    }
-    
-    .slide {
-        padding: 1rem;
-    }
-    
-    .btn {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-}
-
-/* Ensure hero-text matches slider height */
-@media (min-width: 769px) {
-    .hero-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 400px;
-    }
-}
-
-
 /* Ebooks Section */
 .ebooks-section {
     padding: 80px 0;
@@ -408,9 +335,248 @@ title: Home
     max-height: 70%;
 }
 
-/* Mobile Responsive */
+/* Fallback for older browsers */
+.ebook-cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ebook-card:hover .ebook-cover::before {
+    opacity: 1;
+}
+
+/* Search Box Styles */
+.search-container {
+    margin: 0 2rem;
+    flex: 0 1 300px;
+}
+
+.search-form {
+    display: flex;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+    border-color: #2c5aa0;
+    box-shadow: 0 4px 15px rgba(44, 90, 160, 0.2);
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #6c757d;
+}
+
+.search-btn {
+    padding: 12px 20px;
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.search-btn:hover {
+    background: #1e3d72;
+}
+
+/* Search Section Styles */
+.search-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.search-box .search-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Inline Search Box */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-box-inline {
+    flex: 0 1 350px;
+}
+
+.search-box-inline .search-form {
+    border-radius: 8px;
+}
+
+/* Search Results */
+.search-results {
+    margin-top: 2rem;
+}
+
+.search-result-count {
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.no-results {
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+    font-style: italic;
+    grid-column: 1 / -1;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.pagination-btn {
+    padding: 8px 16px;
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #1e3d72;
+    transform: translateY(-2px);
+}
+
+.pagination-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.page-number {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+/* Mobile Responsive Search */
 @media (max-width: 768px) {
-    .ebooks-grid {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        order: 2;
+    }
+    
+    .hero-slider {
+        order: 1;
+        height: 300px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .slider-controls {
+        bottom: 10px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 400px;
+    }
+   .ebooks-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
     }
@@ -432,10 +598,52 @@ title: Home
     .price {
         font-size: 1.4rem;
     }
+ .search-container {
+        order: 3;
+        flex: 1 1 100%;
+        margin: 1rem 0 0 0;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box-inline {
+        flex: 1 1 100%;
+    }
+    
+    .search-form {
+        border-radius: 8px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 480px) {
-    .ebooks-grid {
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-slider {
+        height: 250px;
+    }
+    
+    .slide {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+  .ebooks-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -454,25 +662,17 @@ title: Home
     .description {
         -webkit-line-clamp: 2;
     }
+    .search-input {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .search-btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
 }
-
-/* Fallback for older browsers */
-.ebook-cover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255,255,255,0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.ebook-card:hover .ebook-cover::before {
-    opacity: 1;
-}
-    </style>
+</style>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -518,8 +718,22 @@ title: Home
 <!-- Ebook Showcase -->
 <section id="ebooks" class="ebooks-section">
     <div class="container">
-        <h2>Our Ebook Collection</h2>
+        <div class="section-header">
+            <h2>Our Ebook Collection</h2>
+            <!-- Search Box -->
+            <div class="search-box-inline">
+                <form class="search-form" id="searchForm">
+                    <input type="text" placeholder="Search ebooks..." class="search-input" id="searchInput">
+                    <button type="submit" class="search-btn">🔍 Search</button>
+                </form>
+            </div>
+        </div>
         
+        <!-- Search Results Info -->
+        <div class="search-results">
+            <div class="search-result-count" id="searchResultCount"></div>
+        </div>
+            
         <!-- Pagination - Top -->
         <div class="pagination">
             <button class="pagination-btn prev" onclick="changePage(-1)" disabled>← Previous</button>
@@ -529,7 +743,7 @@ title: Home
 
         <div class="ebooks-grid" id="ebooksGrid">
             {% for ebook in site.data.ebooks %}
-            <div class="ebook-card" data-page="{% increment page_counter %}" style="display: {% if forloop.index0 < 6 %}block{% else %}none{% endif %};">
+            <div class="ebook-card" data-title="{{ ebook.title | downcase }}" data-description="{{ ebook.description | downcase }}">
                 <div class="ebook-cover">
                     <img src="{{ ebook.cover }}" alt="{{ ebook.title }}" width="300">
                 </div>
@@ -575,6 +789,7 @@ title: Home
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Slider functionality
     const track = document.querySelector('.slider-track');
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
@@ -631,10 +846,115 @@ document.addEventListener('DOMContentLoaded', function() {
     slider.addEventListener('mouseleave', () => {
         slideInterval = setInterval(nextSlide, 5000);
     });
-});
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+    const ebookCards = document.querySelectorAll('.ebook-card');
+    const searchResultCount = document.getElementById('searchResultCount');
+    
+    // Pagination variables
+    let currentPage = 1;
+    const itemsPerPage = 6;
+    let filteredEbooks = Array.from(ebookCards);
+    
+    // Initialize pagination
+    updatePagination();
+    
+    // Search form submission
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        performSearch();
+    });
+    
+    // Real-time search as user types
+    searchInput.addEventListener('input', function() {
+        performSearch();
+    });
+    
+    // Perform search function
+    function performSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        
+        if (searchTerm === '') {
+            // If search is empty, show all ebooks
+            filteredEbooks = Array.from(ebookCards);
+            searchResultCount.textContent = '';
+        } else {
+            // Filter ebooks based on search term
+            filteredEbooks = Array.from(ebookCards).filter(card => {
+                const title = card.getAttribute('data-title');
+                const description = card.getAttribute('data-description');
+                
+                return title.includes(searchTerm) || description.includes(searchTerm);
+            });
+            
+            // Update search result count
+            const resultText = filteredEbooks.length === 1 ? 'result' : 'results';
+            searchResultCount.textContent = `Found ${filteredEbooks.length} ${resultText} for "${searchTerm}"`;
+        }
+        
+        // Reset to first page after search
+        currentPage = 1;
+        updatePagination();
+        displayCurrentPage();
+    }
+    
+    // Update pagination controls
+    function updatePagination() {
+        const totalPages = Math.ceil(filteredEbooks.length / itemsPerPage);
+        
+        // Update page numbers
+        document.getElementById('totalPages').textContent = totalPages;
+        document.getElementById('currentPage').textContent = currentPage;
+        document.getElementById('totalPagesBottom').textContent = totalPages;
+        document.getElementById('currentPageBottom').textContent = currentPage;
+        
+        // Update button states
+        const prevButtons = document.querySelectorAll('.pagination-btn.prev');
+        const nextButtons = document.querySelectorAll('.pagination-btn.next');
+        
+        prevButtons.forEach(btn => {
+            btn.disabled = currentPage === 1;
+        });
+        
+        nextButtons.forEach(btn => {
+            btn.disabled = currentPage === totalPages || totalPages === 0;
+        });
+    }
+    
+    // Display current page of ebooks
+    function displayCurrentPage() {
+        // Hide all ebooks first
+        ebookCards.forEach(card => {
+            card.style.display = 'none';
+        });
+        
+        // Calculate start and end index for current page
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        
+        // Display ebooks for current page
+        const ebooksToShow = filteredEbooks.slice(startIndex, endIndex);
+        
+        if (ebooksToShow.length === 0) {
+            // Show no results message
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.textContent = 'No ebooks found matching your search criteria.';
+            
+            // Clear grid and add no results message
+            const grid = document.getElementById('ebooksGrid');
+            grid.innerHTML = '';
+            grid.appendChild(noResults);
+        } else {
+            ebooksToShow.forEach(card => {
+                card.style.display = 'flex';
+            });
+        }
+    }
+    
+    // Image aspect ratio handling
     const ebookCovers = document.querySelectorAll('.ebook-cover img');
     
     ebookCovers.forEach(img => {
@@ -667,4 +987,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Global function for pagination buttons
+function changePage(direction) {
+    const totalPages = Math.ceil(document.querySelectorAll('.ebook-card[style*="display: flex"]').length / 6);
+    
+    // Update current page
+    window.currentPage += direction;
+    
+    // Ensure page is within bounds
+    if (window.currentPage < 1) window.currentPage = 1;
+    if (window.currentPage > totalPages) window.currentPage = totalPages;
+    
+    // Update pagination and display
+    updatePagination();
+    displayCurrentPage();
+}
+
+// These functions need to be accessible globally
+function updatePagination() {
+    const totalPages = Math.ceil(window.filteredEbooks.length / 6);
+    
+    // Update page numbers
+    document.getElementById('totalPages').textContent = totalPages;
+    document.getElementById('currentPage').textContent = window.currentPage;
+    document.getElementById('totalPagesBottom').textContent = totalPages;
+    document.getElementById('currentPageBottom').textContent = window.currentPage;
+    
+    // Update button states
+    const prevButtons = document.querySelectorAll('.pagination-btn.prev');
+    const nextButtons = document.querySelectorAll('.pagination-btn.next');
+    
+    prevButtons.forEach(btn => {
+        btn.disabled = window.currentPage === 1;
+    });
+    
+    nextButtons.forEach(btn => {
+        btn.disabled = window.currentPage === totalPages || totalPages === 0;
+    });
+}
+
+function displayCurrentPage() {
+    const ebookCards = document.querySelectorAll('.ebook-card');
+    const itemsPerPage = 6;
+    
+    // Hide all ebooks first
+    ebookCards.forEach(card => {
+        card.style.display = 'none';
+    });
+    
+    // Calculate start and end index for current page
+    const startIndex = (window.currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    
+    // Display ebooks for current page
+    const ebooksToShow = window.filteredEbooks.slice(startIndex, endIndex);
+    
+    if (ebooksToShow.length === 0 && window.filteredEbooks.length === 0) {
+        // Show no results message
+        const noResults = document.createElement('div');
+        noResults.className = 'no-results';
+        noResults.textContent = 'No ebooks found matching your search criteria.';
+        
+        // Clear grid and add no results message
+        const grid = document.getElementById('ebooksGrid');
+        grid.innerHTML = '';
+        grid.appendChild(noResults);
+    } else {
+        ebooksToShow.forEach(card => {
+            card.style.display = 'flex';
+        });
+    }
+}
 </script>
