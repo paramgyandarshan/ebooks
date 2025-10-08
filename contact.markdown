@@ -5,7 +5,8 @@ permalink: /contact/
 ---
 
 <style>
-  /* Contact Section */
+/* আপনার existing CSS styles এখানে থাকবে */
+/* Contact Section */
 .contact-section {
     padding: 80px 0;
     background: #f8f9fa;
@@ -164,6 +165,27 @@ permalink: /contact/
     margin-top: 1rem;
 }
 
+/* Success Message Styles */
+.form-success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .contact-section {
@@ -248,7 +270,6 @@ permalink: /contact/
                         </div>
                     </div>
                     
-                    
                     <div class="contact-method">
                         <div class="method-icon">🌐</div>
                         <div class="method-details">
@@ -263,25 +284,94 @@ permalink: /contact/
             
             <div class="contact-form">
                 <h2>Send Us a Message</h2>
-                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xanpdbgb" method="POST">
+                    <!-- Success/Error Messages -->
+                    <div id="formMessages"></div>
+                    
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span id="submitText">Send Message</span>
+                        <span id="loadingText" style="display:none">Sending...</span>
+                    </button>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formMessages = document.getElementById('formMessages');
+    const submitText = document.getElementById('submitText');
+    const loadingText = document.getElementById('loadingText');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitText.style.display = 'none';
+        loadingText.style.display = 'inline';
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        
+        // Send form data to Formspree
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show success message
+                formMessages.innerHTML = `
+                    <div class="form-success">
+                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                `;
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            // Show error message
+            formMessages.innerHTML = `
+                <div class="form-error">
+                    <strong>Sorry!</strong> There was an error sending your message. Please try again or email us directly.
+                </div>
+            `;
+        })
+        .finally(() => {
+            // Reset button state
+            submitText.style.display = 'inline';
+            loadingText.style.display = 'none';
+        });
+    });
+});
+</script>
